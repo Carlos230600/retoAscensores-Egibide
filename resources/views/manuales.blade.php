@@ -80,38 +80,5 @@
         </ul>
     </div>
     
-      <script>
-         <?php
-                $host="eu-cdbr-west-02.cleardb.net";
-                $dbname="heroku_31fca26549d8c3";
-                $user="b5c64696c8bc52";
-                $pass="74f50844";
-            
-                $baseDatos = conectar($host,$dbname,$user,$pass);
-            
-                function conectar($host,$dbname,$user,$pass){
-                    try {
-                        $baseDatos= new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-                        return $baseDatos;
-                    }
-                    catch(PDOException $e) {
-                        echo $e->getMessage();
-                    }
-                }
-
-                function selectAnuncio($baseDatos, $tabla="manuales",$col1="idManual",$col2="idAscensor",$col3="modeloAscensor"){
-                    $datos = array();
-                    $statement = $baseDatos->query("SELECT $col1,$col2,$col3 FROM $tabla");
-                    while($row = $statement->fetch()){
-                        array_push($datos, [$row["$col1"],$row["$col2"],$row[$col3]]);//Array Bidimensional
-                    }
-                    return $datos;
-                }
-                $datos=selectAnuncio($baseDatos,"manuales","idManual","idAscensor","modeloAscensor");
-                echo json_encode($datos);
-            ?>
-    
-    </script>
-    
 </body>
 </html>
