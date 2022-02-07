@@ -300,8 +300,8 @@
                         console.log("Poner incidencia como completada")
                         return "salir";
                     } else if (result.isDenied) {
-                        window.scrollTo(0,document.body.scrollHeight);
                         document.getElementById("inpComentario").focus();
+                        window.scrollTo(0,document.body.scrollHeight);
                     }
                     }));
             });
