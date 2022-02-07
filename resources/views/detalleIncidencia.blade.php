@@ -301,7 +301,7 @@
                         return "salir";
                     } else if (result.isDenied) {
                         console.log("Poner incidencia en proceso");
-                        objDiv.scrollTop = $(document).height();
+                        $(document).scrollTop=$(document).height();
                         console.log($(document).height());
                     }
                     }));
