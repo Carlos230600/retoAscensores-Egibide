@@ -237,7 +237,6 @@
 
         //Cuando selecciona el boton de cerrar sesion
         document.getElementById("salir").addEventListener('click',function(){
-        console.log(window.location.href);
             Swal.fire({
                 title: '¿Cerrar sesion?',
                 text: "Se cerrará la sesión para (NombreUsuario)",
