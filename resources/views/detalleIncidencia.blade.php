@@ -66,7 +66,7 @@
         }
 
         .manOpc4{
-            height: 250px;
+            height: auto;
             background: none;
             border: solid 0.5px gainsboro;
             overflow-y: scroll;
