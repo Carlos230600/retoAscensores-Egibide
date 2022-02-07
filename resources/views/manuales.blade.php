@@ -80,5 +80,20 @@
         </ul>
     </div>
     
+      <script>
+        ///var manuales= recoger los datos de la base de datos
+        $(document).ready(function(){
+            $.ajax({    
+            type: "POST",
+            url: "database/selectManuales.php",             
+            dataType: "text",          
+            statusCode: {500:() => console.error("Error de Servidor 500")},
+            success: respuesta => console.log(respuesta),
+            error: (jqXHR, textStatus, errorThrown) =>alert("errorR")
+        });
+        });
+    
+    </script>
+    
 </body>
 </html>
