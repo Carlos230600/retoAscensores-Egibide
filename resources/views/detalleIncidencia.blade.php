@@ -269,7 +269,7 @@
                     </ul>
                        
                     <div id="comentario" height: auto;">
-                        <textarea class="form-control" maxlength="150" rows="2" placeholder="Escribe aqui tu comentario"></textarea>
+                        <textarea id="inpComentario" class="form-control" maxlength="150" rows="2" placeholder="Escribe aqui tu comentario"></textarea>
                         <!--Añadir comentario-->
                         <div id="enviar">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
@@ -301,7 +301,7 @@
                         return "salir";
                     } else if (result.isDenied) {
                         window.scrollTo(0,document.body.scrollHeight);
-                        console.log($(document).height());
+                        document.getElementById("inpComentario").focus();
                     }
                     }));
             });
