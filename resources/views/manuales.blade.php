@@ -83,6 +83,13 @@
                     right: 3%;
                 }
                 
+                   @media (max-width:768px) {
+                        #listaManuales >li{
+                            width: 100%;
+                        }
+
+                    }
+                
             </style>
             <div class="tecnicosOpc2">
                 <div class="imagenTecn">
