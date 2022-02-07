@@ -14,7 +14,7 @@
 
             this.addEventListener("click",function(){
             //abrir prf
-            window.open(secure_asset('./Práctica Heroku.pdf'));
+            window.open(url('./Práctica Heroku.pdf'));
             });
         }
 
