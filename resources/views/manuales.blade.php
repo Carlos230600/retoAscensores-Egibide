@@ -192,6 +192,12 @@
         width: 50%;
     }
 
+    @media (max-width:768px) {
+        #listaManuales >li{
+            width: 100%;
+        }
+    }
+
 </style>
 </head>
 <body>
