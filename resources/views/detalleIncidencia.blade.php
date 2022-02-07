@@ -300,8 +300,7 @@
                         console.log("Poner incidencia como completada")
                         return "salir";
                     } else if (result.isDenied) {
-                        console.log("Poner incidencia en proceso");
-                        $(document).scrollTop=$(document).height();
+                        window.scrollTo(0,document.body.scrollHeight);
                         console.log($(document).height());
                     }
                     }));
