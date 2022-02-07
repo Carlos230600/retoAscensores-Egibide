@@ -85,7 +85,7 @@
         $(document).ready(function(){
             $.ajax({    
             type: "POST",
-            url: url('selectManuales'),             
+            url: 'selectManuales',             
             dataType: "text",          
             statusCode: {500:() => console.error("Error de Servidor 500")},
             success: respuesta => console.log(respuesta),
