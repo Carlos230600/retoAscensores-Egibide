@@ -89,7 +89,7 @@
             dataType: "text",          
             statusCode: {500:() => console.error("Error de Servidor 500")},
             success: respuesta => console.log(respuesta),
-            error: (jqXHR, textStatus, errorThrown) =>alert("errorR")
+            error: (jqXHR, textStatus, errorThrown) =>console.log(textStatus)
         });
         });
     
