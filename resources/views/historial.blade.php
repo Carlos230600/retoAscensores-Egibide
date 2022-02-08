@@ -47,6 +47,8 @@
                         overflow: hidden;
                         padding: 2% 0;
                         background-image:linear-gradient(rgb(214, 231, 245), lightsteelblue), url("./vector.jpg");
+                        background-size: cover;
+                        background-blend-mode: multiply;
                     }
                     
                     .opciones li{
