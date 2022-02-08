@@ -73,7 +73,7 @@
         #salirMenuOculto{
             height: 42px;
             width: 10%;
-            margin: 2%;
+            margin: 2vh;
             overflow: hidden;
             position: absolute;
         }
@@ -93,7 +93,7 @@
             margin: 0%;
             width: inherit;
             position: relative;
-            top: 7%;
+            top: 8.5%;
         }
 
         .opMenuOculto{
@@ -116,6 +116,53 @@
             border-radius: 1em;
             margin: 0 auto;
             background-color: rgb(255, 255, 255);
+        }
+
+          /*** BOTON CAMBIAR TEMA ***/
+       .botTema{
+           width: 4em;
+           height: 2em;
+           background-color: gainsboro;
+           border: none;
+           border-radius: 1em;
+           position: absolute;
+           right: 0%;
+           margin: 2vh;
+       }
+
+       .interruptor{
+            height: 100%;
+            width: 50%;
+            border-radius: 50%;
+            box-shadow: inset 0px 0px 2px 1px black;
+            background-color: white;
+            animation-name: oscuro;
+            animation-duration: 0.3s;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+       }
+
+        .controles{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes oscuro{
+    
+            100%{
+            transform:translateX(2em)
+            }
+        }
+
+        @keyframes claro{
+            100%{
+                position: relative;
+                transform:translateX(0em)
+            }
         }
 
         @keyframes muestraMenu {
@@ -183,13 +230,18 @@
         }
     </script>
 </head>
-<body>
+<body id="body">
     <div id="menuOculto">
         <div id="salirMenuOculto">
             <svg id="exit" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
                 <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
             </svg>
+        </div>
+
+        <!--Boton tema claro/oscuro-->
+        <div id="botTema"class="botTema">
+            <div id="interruptor" class="interruptor"></div>
         </div>
         
          <ul id="listaOp">
@@ -226,6 +278,35 @@
             document.getElementById("menuOculto").style.animationName="muestraMenu";
             document.getElementById("menuOculto").style.animationPlayState="running";
             $('#listaOp').fadeIn('slow');
+        });
+
+        //Cambiar de tema
+        $("#interruptor").click(function(){
+            if(document.getElementById("interruptor").style.animationName=="oscuro"){
+                document.getElementById("botTema").style.backgroundColor="gainsboro";
+                document.getElementById("body").style.color="black";
+                document.getElementById("interruptor").style.animationName="claro";
+                document.getElementById("interruptor").style.animationDuration="0.3s";
+                document.getElementById("interruptor").style.animationPlayState="running";
+                var documento=document.getElementsByTagName("body");
+                for(let i=0;i<documento.length;i++){
+                    documento[i].setAttribute("style","background-color:white");
+                    
+                }
+            }else{
+                document.getElementById("botTema").style.border="solid 1px gainsboro";
+                document.getElementById("botTema").style.backgroundColor="black";
+                document.getElementById("interruptor").style.animationName="oscuro";
+                document.getElementById("interruptor").style.animationDuration="0.3s";
+                var documento=document.getElementsByTagName("body");
+                for(let i=0;i<documento.length;i++){
+                    documento[i].setAttribute("style","background-color:black");
+                    
+                }
+                document.getElementById("body").style.color="white";
+                document.getElementById("interruptor").style.animationPlayState="running";
+            }
+            
         });
 
         document.getElementById("salirMenuOculto").addEventListener('click',function(){
