@@ -251,8 +251,8 @@
             <li><div class="opMenuOculto" onclick="confirmaNavegar('./listadoJefeEquipo')">Jefes de Equipo</div></li><hr class="line">
             <li><div class="opMenuOculto" onclick="confirmaNavegar('./reportes')">Reportes</div></li><hr class="line">
             <li><div class="opMenuOculto" onclick="confirmaNavegar('./manuales')">Manuales</div></li><hr class="line">
-            <li><div class="opMenuOculto">Historial</div></li><hr class="line">
-            <li><div class="opMenuOculto">Estadisticas</div></li>
+            <li><div class="opMenuOculto" onclick="confirmaNavegar('./historial')">Historial</div></li><hr class="line">
+            <li><div class="opMenuOculto" onclick="confirmaNavegar('./estadisticas')">Estadisticas</div></li>
         </ul>
     </div>
     <div id="header">
