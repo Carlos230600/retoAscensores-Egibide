@@ -322,9 +322,11 @@
         var detalles={
             comunidad:"Alava",
             localidad:"Vitoria-Gasteiz",
-            calle:sessionStorage.getItem("calleIncidencia"),
-            idAscensor:"15653AV",
-            idManualAsociado:"213342"
+            Dirección:sessionStorage.getItem("calleIncidencia"),
+            ModeloAscensor:"15653AV",
+            PesoAscensor:"4000Kg",
+            Paradas:7,
+            Recorrido:"20m";
         }
 
         for(var clave in detalles){
