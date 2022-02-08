@@ -81,7 +81,7 @@
             width: 96%;
             background: linear-gradient(rgb(164, 228, 122), rgb(148, 202, 111));
             border-radius: 0.4em;
-            margin: 5% 2% 4% 2%;
+            margin: 0 2%;
             font-size: 1.35pc;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
