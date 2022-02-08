@@ -303,7 +303,6 @@
                     documento[i].setAttribute("style","background-color:black");
                     
                 }
-                document.getElementById("body").style.color="white";
                 document.getElementById("interruptor").style.animationPlayState="running";
             }
             
