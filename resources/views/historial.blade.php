@@ -11,6 +11,13 @@
             
             constructor(){
                 super();
+                
+                 this.addEventListener("click",function(){
+                    //Almacena los datos en sesion
+                    sessionStorage.setItem("idIncidencia",this.id);
+                    sessionStorage.setItem("calleIncidencia",this.getAttribute("calle"));
+                    location.href='./detalleIncidencia';
+                 });
             }
     
             connectedCallback(){
